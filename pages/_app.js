@@ -22,6 +22,8 @@ function App({ Component, pageProps }) {
           property="og:image"
           content="https://spacetypeco.com/social_image.png"
         />
+        <meta property="twitter:title" content={Content.siteName} />
+        <meta property="twitter:description" content={Content.siteDescription} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:creator" content="@spacetypeco" />
         <meta
