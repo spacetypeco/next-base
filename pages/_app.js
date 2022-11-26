@@ -64,7 +64,7 @@ function App({ Component, pageProps }) {
       <div
         className="flex flex-col justify-start min-h-screen"
         style={{
-          backgroundColor: "var(--color-black)",
+          backgroundColor: "var(--color-bg)",
           transition: "background-color 0.25s",
         }}
       >
