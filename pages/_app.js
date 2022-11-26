@@ -4,6 +4,8 @@
  * We can add shared stylesheets and set the charset here.
  */
 
+import "../styles/base.scss";
+
 import Content from "../content";
 import Head from "next/head";
 
@@ -60,11 +62,8 @@ function App({ Component, pageProps }) {
       </Head>
 
       <div
+        className="flex flex-col justify-start min-h-screen"
         style={{
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "100vh",
-          justifyContent: "flex-start",
           backgroundColor: "var(--color-black)",
           transition: "background-color 0.25s",
         }}
