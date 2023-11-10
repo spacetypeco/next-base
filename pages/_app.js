@@ -5,6 +5,8 @@
  */
 
 import "../styles/base.scss";
+import "../styles/themes.scss";
+import "../styles/typography.scss";
 
 import Content from "../content";
 import Head from "next/head";
