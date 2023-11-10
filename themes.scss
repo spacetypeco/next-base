@@ -1,4 +1,15 @@
 :root {
-   --color-bg: #000000;
-   --color-fg: #FFFFFF;
+   --color-neutral-100: #000000;
+   --color-neutral-300: #797979;
+   --color-neutral-500: #F1F1F1;
+   --color-neutral-700: #FBFBFB;
+   --color-neutral-900: #FFFFFF;
+
+   --color-black: var(--color-neutral-100);
+   --color-white: var(--color-neutral-900);
+
+   --color-secondary-light: var(--color-black);
+   --color-primary-light: var(--color-white);
+   --color-primary: var(--color-primary-light);
+   --color-secondary: var(--color-secondary-light);
 }
