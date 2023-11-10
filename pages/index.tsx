@@ -1,5 +1,5 @@
 function Home() {
-  return <>Hello world!</>;
+  return <div style={{ paddingTop: "var(--nav-spacing)" }}>Hello world!</div>;
 }
 
 Home.displayName = "Home";
