@@ -1,8 +1,7 @@
 const Content = {
-  siteName: "typeElectives",
-  siteDescription:
-    "typeElectives is an online design school shaping the future of type.",
-  siteUrl: "https://www.typeelectives.com",
+  siteName: "Space Type Next Template",
+  siteDescription: "Starter Next.js template for projects.",
+  siteUrl: "https://www.spacetypeco.com",
 };
 
 export default Content;
