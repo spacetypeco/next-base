@@ -27,8 +27,8 @@ export default function Navigation({ activeComponentName }) {
           activeComponentName === componentName ? "link active" : "link"
         }
       >
-        <Link href={href}>
-          <a onClick={() => setOpen(false)}>{componentName}</a>
+        <Link href={href} onClick={() => setOpen(false)}>
+          {componentName}
         </Link>
       </div>
     );
@@ -42,10 +42,8 @@ export default function Navigation({ activeComponentName }) {
     return (
       <div className={classes} style={style}>
         <div className="logo overflow-y-hidden">
-          <Link href="/">
-            <a onClick={() => setOpen(false)}>
-              <LogoWhite />
-            </a>
+          <Link href="/" onClick={() => setOpen(false)}>
+            <LogoWhite />
           </Link>
         </div>
         <div>
@@ -55,9 +53,7 @@ export default function Navigation({ activeComponentName }) {
               className="flex flex-col md:flex-row items-center justify-center h-full gap-8"
             >
               {NavLink("Fonts", "/fonts")}
-              {NavLink("Shop", "/shop")}
               {NavLink("About", "/about")}
-              {NavLink("Cart", "/cart")}
             </div>
           </div>
         </div>

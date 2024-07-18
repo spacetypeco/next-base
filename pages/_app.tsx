@@ -8,9 +8,12 @@ import "../styles/base.scss";
 import "../styles/themes.scss";
 import "../styles/typography.scss";
 import "../styles/layout.scss";
+import "../styles/logo.scss";
 
 import Content from "../content";
+import Footer from "../components/Footer";
 import Head from "next/head";
+import Navigation from "../components/Navigation";
 
 function App({ Component, pageProps }) {
   return (
@@ -64,7 +67,9 @@ function App({ Component, pageProps }) {
         <meta name="theme-color" content="#FFFFFF" /> */}
       </Head>
 
-      <div
+      <Navigation activeComponentName={Component.displayName} />
+
+      <main
         className="flex flex-col justify-start min-h-screen"
         style={{
           backgroundColor: "var(--color-secondary)",
@@ -72,7 +77,8 @@ function App({ Component, pageProps }) {
         }}
       >
         <Component {...pageProps} />
-      </div>
+      </main>
+      <Footer />
     </>
   );
 }
