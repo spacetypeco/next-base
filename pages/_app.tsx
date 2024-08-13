@@ -10,10 +10,11 @@ import "../styles/typography.scss";
 import "../styles/layout.scss";
 import "../styles/logo.scss";
 
-import Content from "../content";
-import Footer from "../components/Footer";
 import Head from "next/head";
+
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import Content from "../content";
 
 function App({ Component, pageProps }) {
   return (

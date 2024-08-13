@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import Routes from "../routes";
 
 interface FooterProps {

@@ -3,12 +3,11 @@ import {
   createClient as createDeliveryClient,
 } from "contentful";
 import {
-  PlainClientAPI,
   createClient as createManagementClient,
+  PlainClientAPI,
 } from "contentful-management";
-
-import html from "remark-html";
 import { remark } from "remark";
+import html from "remark-html";
 
 /**
  * Singleton API Client for Contentful.
@@ -50,7 +49,7 @@ class ContentfulClient {
           spaceId: process.env.CONTENTFUL_SPACE_ID,
           environmentId: "master",
         },
-      }
+      },
     );
   }
 
@@ -83,7 +82,7 @@ class ContentfulClient {
    */
   public static async getPageContent(
     pageName: string,
-    fieldNames?: string[]
+    fieldNames?: string[],
   ): Promise<Object> {
     const [contentType, entries] = await Promise.all([
       this.readClient.getContentType(pageName),
@@ -94,7 +93,7 @@ class ContentfulClient {
     const fieldTypes = Object.fromEntries(
       contentType.fields.map((field) => {
         return [field.id, field.type];
-      })
+      }),
     );
 
     let keysToParse = Object.keys(fields);
@@ -111,7 +110,7 @@ class ContentfulClient {
         } else {
           return [key, fields[key]];
         }
-      })
+      }),
     ).then(Object.fromEntries);
   }
 }

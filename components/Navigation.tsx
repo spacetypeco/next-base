@@ -1,8 +1,10 @@
 import { Rotate as Hamburger } from "hamburger-react";
+
 import Link from "next/link";
-import LogoWhite from "../public/img/logo_white.svg";
-import useHideOnScroll from "../hooks/useHideOnScroll";
 import { useState } from "react";
+
+import useHideOnScroll from "../hooks/useHideOnScroll";
+import LogoWhite from "../public/img/logo_white.svg";
 
 export default function Navigation({ activeComponentName }) {
   let visible = useHideOnScroll();
