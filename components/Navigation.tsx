@@ -1,13 +1,17 @@
+"use client";
+
 import { Rotate as Hamburger } from "hamburger-react";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import useHideOnScroll from "../hooks/useHideOnScroll";
 import LogoWhite from "../public/img/logo_white.svg";
 
-export default function Navigation({ activeComponentName }) {
+export default function Navigation() {
   let visible = useHideOnScroll();
+  const pathname = usePathname();
   const [isOpen, setOpen] = useState(false);
 
   let mobileStyle = {
@@ -24,11 +28,7 @@ export default function Navigation({ activeComponentName }) {
 
   const NavLink = (componentName, href) => {
     return (
-      <div
-        className={
-          activeComponentName === componentName ? "link active" : "link"
-        }
-      >
+      <div className={href === pathname ? "link active" : "link"}>
         <Link href={href} onClick={() => setOpen(false)}>
           {componentName}
         </Link>

@@ -3,23 +3,40 @@
  *
  * We can add shared stylesheets and set the charset here.
  */
-
 import "../styles/base.scss";
 import "../styles/themes.scss";
 import "../styles/typography.scss";
 import "../styles/layout.scss";
 import "../styles/logo.scss";
 
-import Head from "next/head";
-
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import Content from "../content";
 
-function App({ Component, pageProps }) {
-  return (
+export default function Layout({ children }) {
+  // Update this with your custom Google Analytics ID
+  const GoogleAnalytics = (
     <>
-      <Head>
+      {/* <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-[YOURANALYTICSID]"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-[YOURANALYTICSID]');
+        `,
+        }}
+      /> */}
+    </>
+  );
+
+  return (
+    <html>
+      <head>
+        {GoogleAnalytics}
         <meta charSet="utf-8" />
         <title>{Content.siteName}</title>
         <meta name="description" content={Content.siteDescription} />
@@ -66,22 +83,20 @@ function App({ Component, pageProps }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5BBAD5" />
         <meta name="msapplication-TileColor" content="#DA532C" />
         <meta name="theme-color" content="#FFFFFF" /> */}
-      </Head>
-
-      <Navigation activeComponentName={Component.displayName} />
-
-      <main
-        className="flex flex-col justify-start min-h-screen"
-        style={{
-          backgroundColor: "var(--color-secondary)",
-          transition: "background-color 0.25s",
-        }}
-      >
-        <Component {...pageProps} />
-      </main>
-      <Footer />
-    </>
+      </head>
+      <body>
+        <Navigation />
+        <main
+          className="flex flex-col justify-start min-h-screen"
+          style={{
+            backgroundColor: "var(--color-secondary)",
+            transition: "background-color 0.25s",
+          }}
+        >
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
   );
 }
-
-export default App;

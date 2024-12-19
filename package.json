@@ -5,6 +5,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "lint": "next lint",
     "format": "prettier --write '**/*.{js,json,md,mdx,ts,tsx,scss,yaml,yml}'",
     "format-check": "prettier --check '**/*.{js,json,md,mdx,ts,tsx,scss,yaml,yml}'"
   },
@@ -13,7 +14,7 @@
     "contentful-management": "^11.5.1",
     "hamburger-react": "^2.5.1",
     "lodash.merge": "^4.6.2",
-    "next": "^14.2.5",
+    "next": "^14.2.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-mailchimp-subscribe": "^2.1.3",
