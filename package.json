@@ -10,8 +10,10 @@
     "format-check": "prettier --check '**/*.{js,json,md,mdx,ts,tsx,scss,yaml,yml}'"
   },
   "dependencies": {
+    "chroma-js": "^3.1.2",
     "contentful": "^10.6.7",
     "contentful-management": "^11.5.1",
+    "dayjs": "^1.11.13",
     "hamburger-react": "^2.5.1",
     "lodash.merge": "^4.6.2",
     "next": "^14.2.21",

@@ -3,12 +3,13 @@
 }
 
 .container {
+  @apply px-4 md:px-12;
   margin-inline: auto;
   max-width: 1200px;
 }
 
 .container-full {
-  @apply px-12;
+  @apply px-4 md:px-12;
 }
 
 th {

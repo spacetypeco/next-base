@@ -11,7 +11,7 @@ export default function Footer(props: FooterProps) {
 
   return (
     <div
-      className={`container-full w-full flex flex-col sm:flex-row justify-between pt-16 pb-36 z-20 transition-colors duration-1000`}
+      className={`container w-full flex flex-col sm:flex-row justify-between pt-16 pb-36 z-20 transition-colors duration-1000`}
     >
       <div className="flex flex-col-reverse gap-12 sm:gap-0 sm:flex-row">
         <div className="flex flex-col pr-24">
